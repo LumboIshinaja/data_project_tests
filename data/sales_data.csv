@@ -1,0 +1,51 @@
+transaction_id,customer_id,product,category,quantity,price,discount,total,purchase_date,country
+1,1001,Laptop,Electronics,1,1200,100,1100,2025-02-17 14:23:45,USA
+2,1002,Mouse,Electronics,2,25,0,50,2025-02-17 09:15:12,UK
+3,1003,Keyboard,Electronics,1,75,5,70,2025-02-16 18:45:00,DE
+4,1001,Monitor,Electronics,1,300,20,280,2025-02-16 11:30:21,USA
+5,1004,Desk,Furniture,1,500,50,450,2025-02-15 10:05:55,FR
+6,1005,Chair,Furniture,2,200,20,380,2025-02-14 16:12:11,IT
+7,1006,Smartphone,Electronics,1,900,50,850,2025-02-14 08:43:33,ES
+8,1007,Tablet,Electronics,1,700,30,670,2025-02-13 12:00:00,NL
+9,1008,Desk Lamp,Furniture,3,60,10,170,2025-02-12 14:20:59,USA
+10,1009,Printer,Electronics,1,400,25,375,2025-02-12 09:45:32,UK
+11,1010,Sofa,Furniture,1,800,100,700,2025-02-11 11:11:11,DE
+12,1011,Bookshelf,Furniture,1,300,30,270,2025-02-10 15:45:45,FR
+13,1012,Headphones,Electronics,2,150,20,280,2025-02-09 08:30:00,IT
+14,1013,Camera,Electronics,1,1100,150,950,2025-02-08 13:22:33,ES
+15,1014,Microphone,Electronics,1,250,25,225,2025-02-07 10:10:10,NL
+16,1015,Gaming Console,Electronics,1,500,40,460,2025-02-06 18:00:00,USA
+17,1016,Desk,Furniture,1,450,50,400,2025-02-05 14:14:14,UK
+18,1017,Mouse Pad,Accessories,5,15,5,70,2025-02-04 12:12:12,DE
+19,1018,Keyboard,Electronics,1,85,10,75,2025-02-03 09:09:09,FR
+20,1019,Laptop Stand,Accessories,2,50,10,90,2025-02-02 16:16:16,IT
+21,1020,Monitor,Electronics,1,320,30,290,2025-02-01 11:11:11,ES
+22,1021,Desk Chair,Furniture,1,250,20,230,2025-01-31 14:45:00,NL
+23,1022,Smartwatch,Electronics,1,300,30,270,2025-01-30 13:13:13,USA
+24,1023,Desk Lamp,Furniture,2,55,5,105,2025-01-29 10:10:10,UK
+25,1024,Speakers,Electronics,1,180,20,160,2025-01-28 09:09:09,DE
+26,1025,USB Hub,Accessories,3,20,5,55,2025-01-27 12:12:12,FR
+27,1026,External HDD,Electronics,1,120,10,110,2025-01-26 14:14:14,IT
+28,1027,Office Chair,Furniture,1,300,30,270,2025-01-25 15:15:15,ES
+29,1028,Webcam,Electronics,1,90,10,80,2025-01-24 16:16:16,NL
+30,1029,Laptop,Electronics,1,1300,100,1200,2025-01-23 11:11:11,USA
+31,1030,Mouse,Electronics,2,30,0,60,2025-01-22 09:45:00,UK
+32,1031,Keyboard,Electronics,1,95,5,90,2025-01-21 13:13:13,DE
+33,1032,Monitor,Electronics,1,350,25,325,2025-01-20 10:10:10,FR
+34,1033,Desk,Furniture,1,480,40,440,2025-01-19 14:14:14,IT
+35,1034,Chair,Furniture,2,180,15,345,2025-01-18 12:12:12,ES
+36,1035,Smartphone,Electronics,1,950,60,890,2025-01-17 11:11:11,NL
+37,1036,Tablet,Electronics,1,750,35,715,2025-01-16 09:09:09,USA
+38,1037,Desk Lamp,Furniture,3,65,10,185,2025-01-15 10:10:10,UK
+39,1038,Printer,Electronics,1,420,30,390,2025-01-14 13:13:13,DE
+40,1039,Sofa,Furniture,1,850,120,730,2025-01-13 15:15:15,FR
+41,1040,Bookshelf,Furniture,1,320,25,295,2025-01-12 16:16:16,IT
+42,1041,Headphones,Electronics,2,140,15,265,2025-01-11 12:12:12,ES
+43,1042,Camera,Electronics,1,1150,180,970,2025-01-10 09:09:09,NL
+44,1043,Microphone,Electronics,1,270,30,240,2025-01-09 11:11:11,USA
+45,1044,Gaming Console,Electronics,1,530,45,485,2025-01-08 10:10:10,UK
+46,1045,Desk,Furniture,1,470,35,435,2025-01-07 14:14:14,DE
+47,1046,Mouse Pad,Accessories,5,12,2,58,2025-01-06 12:12:12,FR
+48,1047,Laptop Stand,Accessories,2,55,8,102,2025-01-05 09:09:09,IT
+49,1048,Monitor,Electronics,1,310,20,290,2025-01-04 13:13:13,ES
+50,1049,Desk Chair,Furniture,1,260,22,238,2025-01-03 11:11:11,NL
