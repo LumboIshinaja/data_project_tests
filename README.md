@@ -50,6 +50,26 @@ pytest
 pytest -m schema
 ```
 
+### **✅ Run Only Data Integrity Tests**
+```sh
+pytest -m integrity
+```
+
+### **✅ Run Only Performance Tests**
+```sh
+pytest -m performance
+```
+
+### **✅ Run Only Business Logic Tests (within Data Integrity)**
+```sh
+pytest -m business_logic
+```
+
+### **✅ Run Tests in Parallel (All Tests)**
+```sh
+pytest -n auto
+```
+
 ---
 
 
@@ -63,6 +83,8 @@ data_tests/
 │
 │── tests/                      # Pytest test suites
 │   └── test_schema.py          # Schema validation tests
+│   ├── test_data_integrity.py  # Data integrity tests
+│   └── test_performance.py     # Performance tests
 │
 │── utils/
 │   ├── data_loader.py          # CSV loading with PySpark DataFrames
