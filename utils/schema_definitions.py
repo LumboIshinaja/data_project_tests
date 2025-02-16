@@ -12,3 +12,11 @@ SALES_DATA_SCHEMA = StructType([
     StructField("purchase_date", TimestampType(), False),
     StructField("country", StringType(), False),
 ])
+
+CUSTOMERS_SCHEMA = StructType([
+    StructField("customer_id", IntegerType(), False),
+    StructField("name", StringType(), False),
+    StructField("email", StringType(), False),
+    StructField("country", StringType(), False),
+    StructField("signup_date", TimestampType(), False),
+])

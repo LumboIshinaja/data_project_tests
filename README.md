@@ -58,14 +58,16 @@ pytest -m schema
 ```
 data_tests/
 │── data/                       # Sample data files
+│   ├── customers.csv           # Customers data CSV
 │   └── sales_data.csv          # Sales data CSV
 │
 │── tests/                      # Pytest test suites
 │   └── test_schema.py          # Schema validation tests
 │
-│── utils/                      # Utility modules
+│── utils/
 │   ├── data_loader.py          # CSV loading with PySpark DataFrames
-│   └── schema_definitions.py   # PySpark schema definitions
+│   ├── schema_definitions.py   # PySpark schema definitions
+│   └── data_validators.py      # Data validation helpers
 │
 │── conftest.py                 # Shared fixtures 
 │── pytest.ini                  # Pytest configuration 
@@ -76,7 +78,7 @@ data_tests/
 ---
 
 
-## 📢 Contributors
+## 📢 Creator
 - **Milos Jovanovic** - Test Engineer
 
 ---
