@@ -99,6 +99,12 @@ data_tests/
 
 ---
 
+## 👤 CI/CD with GitHub Actions
+This project is integrated with **GitHub Actions** for **continuous testing**:
+- Automatically runs on **push to `main`** and **PRs targeting `main`**.
+- Executes **Schema, Integrity, and Performance tests** using PySpark and Pytest.
+
+---
 
 ## 📢 Creator
 - **Milos Jovanovic** - Test Engineer
