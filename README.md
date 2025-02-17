@@ -8,8 +8,10 @@ This project automates the **testing of data pipelines** using **PySpark & Pytes
 - **✅ Schema Validation**: Validates column names, data types, and nullability.
 - **✅ Data Integrity Tests**: Placeholder for future row comparison and data completeness tests.
 - **✅ Performance Tests**: Placeholder for query performance validation.
+- **✅ Source vs Raw Data Comparison**: Ensures raw data correctly reflects the source JSON.
 - **✅ Fixtures for Test Setup**: Centralized Spark session and data loading setup.
 - **✅ PySpark DataFrames**: Testing based on DataFrames simulating a data warehouse setup.
+- **✅ CI/CD Integration**: Automated testing with GitHub Actions.
 
 ---
 
@@ -34,6 +36,11 @@ venv\Scripts\activate      # Windows
 ```sh
 pip install -r requirements.txt
 playwright install
+```
+
+### 4️⃣ **Run Data Source Script (Creates Required Views)**
+```sh
+python -m utils.data_loader.py
 ```
 
 ---
@@ -65,6 +72,11 @@ pytest -m performance
 pytest -m business_logic
 ```
 
+### **✅ Run Only Raw Data View Related Tests**
+```sh
+pytest -m raw_data
+```
+
 ### **✅ Run Tests in Parallel (All Tests)**
 ```sh
 pytest -n auto
@@ -78,6 +90,7 @@ pytest -n auto
 ```
 data_tests/
 │── data/                       # Sample data files
+│   ├── api_transactions.json   # Sample API transactions JSON (source data)
 │   ├── customers.csv           # Customers data CSV
 │   └── sales_data.csv          # Sales data CSV
 │
@@ -103,6 +116,7 @@ data_tests/
 This project is integrated with **GitHub Actions** for **continuous testing**:
 - Automatically runs on **push to `main`** and **PRs targeting `main`**.
 - Executes **Schema, Integrity, and Performance tests** using PySpark and Pytest.
+- Ensures **source data aligns with raw ingestion results**.
 
 ---
 

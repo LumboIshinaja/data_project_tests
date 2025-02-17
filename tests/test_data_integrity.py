@@ -1,5 +1,5 @@
 import pytest
-from utils.schema_definitions import SALES_DATA_SCHEMA
+from utils.schema_definitions import SALES_DATA_SCHEMA, API_TRANSACTIONS_SCHEMA
 from utils.data_validators import count_duplicates, count_nulls, count_non_positive_values, count_incorrect_totals, count_negative_values, get_distinct_values
 
 
@@ -62,3 +62,21 @@ def test_id_exists_in_customers(sales_data_df, customers_data_df):
     assert sales_customer_ids.issubset(customers_ids), (
         f"Missing customer_ids in customers data: {sales_customer_ids - customers_ids}"
     )
+
+@pytest.mark.integrity
+@pytest.mark.raw_data
+def test_api_transaction_id_uniqueness(api_transactions_view_data_df):
+    """Test that 'transaction_id' is unique in the API transactions raw view."""
+    duplicate_count = count_duplicates(api_transactions_view_data_df, "transaction_id")
+    assert duplicate_count == 0, f"Found {duplicate_count} duplicate transaction_id(s) in raw view."
+
+
+@pytest.mark.integrity
+@pytest.mark.raw_data
+def test_api_transactions_required_fields_no_null_values(api_transactions_view_data_df):
+    """Test that required fields in raw API transactions view contain no NULL values."""
+    non_nullable_columns = [field.name for field in API_TRANSACTIONS_SCHEMA.fields if not field.nullable]
+
+    for column in non_nullable_columns:
+        null_count = count_nulls(api_transactions_view_data_df, column)
+        assert null_count == 0, f"Column '{column}' contains NULL values in raw view!"

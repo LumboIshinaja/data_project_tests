@@ -1,6 +1,6 @@
 import pytest
 from pyspark.sql import SparkSession
-from utils.data_loader import api_transactions_df, sales_df, customers_df
+from utils.data_loader import api_transactions_df, sales_df, customers_df, api_transactions_view_df
 
 @pytest.fixture(scope="session")
 def spark():
@@ -26,3 +26,8 @@ def customers_data_df():
 def api_transactions_data_df():
     """Fixture to provide API response DataFrame."""
     return api_transactions_df
+
+@pytest.fixture(scope="module")
+def api_transactions_view_data_df():
+    """Fixture to provide API response DataFrame."""
+    return api_transactions_view_df

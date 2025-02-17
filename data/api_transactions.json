@@ -16,5 +16,83 @@
       {"product": "Smartphone", "quantity": 2, "price": 800.00, "discount": 100.00}
     ],
     "total_price": 1500.00
+  },
+  {
+    "transaction_id": "TXN003",
+    "customer_id": "CUST003",
+    "purchase_date": "2024-02-17T09:45:00",
+    "items": [
+      {"product": "Tablet", "quantity": 3, "price": 500.00, "discount": 75.00},
+      {"product": "Wireless Earbuds", "quantity": 1, "price": 150.00, "discount": 10.00}
+    ],
+    "total_price": 1575.00
+  },
+  {
+    "transaction_id": "TXN004",
+    "customer_id": "CUST001",
+    "purchase_date": "2024-02-18T16:30:00",
+    "items": [
+      {"product": "Gaming Mouse", "quantity": 2, "price": 60.00, "discount": 5.00},
+      {"product": "Mechanical Keyboard", "quantity": 1, "price": 120.00, "discount": 10.00}
+    ],
+    "total_price": 225.00
+  },
+  {
+    "transaction_id": "TXN005",
+    "customer_id": "CUST004",
+    "purchase_date": "2024-02-19T13:10:00",
+    "items": [
+      {"product": "Monitor", "quantity": 1, "price": 300.00, "discount": 20.00}
+    ],
+    "total_price": 280.00
+  },
+  {
+    "transaction_id": "TXN006",
+    "customer_id": "CUST005",
+    "purchase_date": "2024-02-20T11:50:00",
+    "items": [
+      {"product": "External Hard Drive", "quantity": 1, "price": 100.00, "discount": 0.00},
+      {"product": "USB-C Hub", "quantity": 1, "price": 40.00, "discount": 5.00}
+    ],
+    "total_price": 135.00
+  },
+  {
+    "transaction_id": "TXN007",
+    "customer_id": "CUST006",
+    "purchase_date": "2024-02-21T17:25:00",
+    "items": [
+      {"product": "Smartwatch", "quantity": 1, "price": 250.00, "discount": 30.00},
+      {"product": "Wireless Charger", "quantity": 1, "price": 50.00, "discount": 5.00}
+    ],
+    "total_price": 265.00
+  },
+  {
+    "transaction_id": "TXN008",
+    "customer_id": "CUST007",
+    "purchase_date": "2024-02-22T08:00:00",
+    "items": [
+      {"product": "Graphics Card", "quantity": 1, "price": 600.00, "discount": 50.00}
+    ],
+    "total_price": 550.00
+  },
+  {
+    "transaction_id": "TXN009",
+    "customer_id": "CUST008",
+    "purchase_date": "2024-02-23T14:00:00",
+    "items": [
+      {"product": "Desktop PC", "quantity": 1, "price": 1500.00, "discount": 100.00},
+      {"product": "Cooling Pad", "quantity": 1, "price": 80.00, "discount": 10.00}
+    ],
+    "total_price": 1470.00
+  },
+  {
+    "transaction_id": "TXN010",
+    "customer_id": "CUST009",
+    "purchase_date": "2024-02-24T19:45:00",
+    "items": [
+      {"product": "Headphones", "quantity": 2, "price": 120.00, "discount": 15.00},
+      {"product": "Microphone", "quantity": 1, "price": 90.00, "discount": 10.00}
+    ],
+    "total_price": 305.00
   }
 ]
