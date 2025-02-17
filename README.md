@@ -35,7 +35,6 @@ venv\Scripts\activate      # Windows
 ### 3️⃣ **Install Dependencies**
 ```sh
 pip install -r requirements.txt
-playwright install
 ```
 
 ### 4️⃣ **Run Data Source Script (Creates Required Views)**
