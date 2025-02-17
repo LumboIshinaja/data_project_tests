@@ -43,3 +43,27 @@ def test_customers_schema_column_types(customers_data_df):
     assert actual_types == expected_types, (
         f"Column types mismatch:\nExpected: {expected_types}\nGot: {actual_types}"
     )
+
+@pytest.mark.schema
+def test_api_transactions_schema_column_names(spark, api_transactions_data_df):
+    """Test that the raw API transactions view has the expected column names."""
+    raw_df = spark.sql("SELECT * FROM raw_api_transactions")  # Fetch data from the view
+
+    actual_columns = raw_df.columns
+    expected_columns = api_transactions_data_df.columns  # Source DataFrame columns
+
+    assert actual_columns == expected_columns, (
+        f"Column names mismatch:\nExpected: {expected_columns}\nGot: {actual_columns}"
+    )
+
+@pytest.mark.schema
+def test_api_transactions_schema_column_types(spark, api_transactions_data_df):
+    """Test that the raw API transactions view has the expected column types."""
+    raw_df = spark.sql("SELECT * FROM raw_api_transactions")  # Fetch data from view
+
+    actual_types = [type(field.dataType) for field in raw_df.schema.fields]
+    expected_types = [type(field.dataType) for field in api_transactions_data_df.schema.fields]
+
+    assert actual_types == expected_types, (
+        f"Column types mismatch:\nExpected: {expected_types}\nGot: {actual_types}"
+    )

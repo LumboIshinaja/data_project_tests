@@ -21,6 +21,10 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Run Data Loader Script
+        run: |
+            python -m utils.data_loader
+
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip

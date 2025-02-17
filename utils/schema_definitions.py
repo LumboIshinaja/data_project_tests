@@ -1,4 +1,4 @@
-from pyspark.sql.types import StructType, StructField, IntegerType, StringType, DoubleType, TimestampType
+from pyspark.sql.types import StructType, StructField, IntegerType, StringType, DoubleType, TimestampType, ArrayType, LongType
 
 SALES_DATA_SCHEMA = StructType([
     StructField("transaction_id", IntegerType(), False),
@@ -21,13 +21,18 @@ CUSTOMERS_SCHEMA = StructType([
     StructField("signup_date", TimestampType(), False),
 ])
 
-from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType
-
-API_RESPONSE_SCHEMA = StructType([
-    StructField("order_id", StringType(), False),
-    StructField("customer_id", StringType(), False),
-    StructField("product_id", StringType(), False),
-    StructField("quantity", IntegerType(), False),
-    StructField("price", DoubleType(), False),
-    StructField("order_date", StringType(), False)
+API_TRANSACTIONS_SCHEMA = StructType([
+    StructField("customer_id", StringType(), True),
+    StructField("items", ArrayType(
+        StructType([
+            StructField("discount", DoubleType(), True),
+            StructField("price", DoubleType(), True),
+            StructField("product", StringType(), True),
+            StructField("quantity", LongType(), True)
+        ])
+    ), True),
+    StructField("purchase_date", StringType(), True),
+    StructField("total_price", DoubleType(), True),
+    StructField("transaction_id", StringType(), True)
 ])
+
