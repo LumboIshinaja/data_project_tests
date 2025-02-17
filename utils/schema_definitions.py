@@ -20,3 +20,14 @@ CUSTOMERS_SCHEMA = StructType([
     StructField("country", StringType(), False),
     StructField("signup_date", TimestampType(), False),
 ])
+
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType
+
+API_RESPONSE_SCHEMA = StructType([
+    StructField("order_id", StringType(), False),
+    StructField("customer_id", StringType(), False),
+    StructField("product_id", StringType(), False),
+    StructField("quantity", IntegerType(), False),
+    StructField("price", DoubleType(), False),
+    StructField("order_date", StringType(), False)
+])

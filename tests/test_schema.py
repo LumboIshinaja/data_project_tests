@@ -3,9 +3,9 @@ from utils.schema_definitions import SALES_DATA_SCHEMA, CUSTOMERS_SCHEMA
 
 
 @pytest.mark.schema
-def test_sales_schema_column_names(sales_df):
+def test_sales_schema_column_names(sales_data_df):
     """Test that the sales data has expected column names."""
-    actual_columns = sales_df.columns
+    actual_columns = sales_data_df.columns
     expected_columns = [field.name for field in SALES_DATA_SCHEMA.fields]
 
     assert actual_columns == expected_columns, (
@@ -14,9 +14,9 @@ def test_sales_schema_column_names(sales_df):
 
 
 @pytest.mark.schema
-def test_sales_schema_column_types(sales_df):
+def test_sales_schema_column_types(sales_data_df):
     """Test that the sales data has expected column types."""
-    actual_types = [type(field.dataType) for field in sales_df.schema.fields]
+    actual_types = [type(field.dataType) for field in sales_data_df.schema.fields]
     expected_types = [type(field.dataType) for field in SALES_DATA_SCHEMA.fields]
 
     assert actual_types == expected_types, (
@@ -24,9 +24,9 @@ def test_sales_schema_column_types(sales_df):
     )
 
 @pytest.mark.schema
-def test_customers_schema_column_names(customers_df):
+def test_customers_schema_column_names(customers_data_df):
     """Test that the customers data has expected column names."""
-    actual_columns = customers_df.columns
+    actual_columns = customers_data_df.columns
     expected_columns = [field.name for field in CUSTOMERS_SCHEMA.fields]
 
     assert actual_columns == expected_columns, (
@@ -35,9 +35,9 @@ def test_customers_schema_column_names(customers_df):
 
 
 @pytest.mark.schema
-def test_customers_schema_column_types(customers_df):
+def test_customers_schema_column_types(customers_data_df):
     """Test that the customers data has expected column types."""
-    actual_types = [type(field.dataType) for field in customers_df.schema.fields]
+    actual_types = [type(field.dataType) for field in customers_data_df.schema.fields]
     expected_types = [type(field.dataType) for field in CUSTOMERS_SCHEMA.fields]
 
     assert actual_types == expected_types, (

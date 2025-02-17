@@ -1,7 +1,6 @@
 import pytest
 from pyspark.sql import SparkSession
-from utils.data_loader import read_csv
-from utils.schema_definitions import SALES_DATA_SCHEMA, CUSTOMERS_SCHEMA
+from utils.data_loader import api_df, sales_df, customers_df
 
 @pytest.fixture(scope="session")
 def spark():
@@ -14,12 +13,17 @@ def spark():
     spark.stop()
 
 @pytest.fixture(scope="module")
-def sales_df(spark):
-    """Load sales data as PySpark DataFrame with a predefined schema."""
-    return read_csv(spark, "data/sales_data.csv", schema=SALES_DATA_SCHEMA)
+def api_response_df():
+    """Fixture to provide API response DataFrame."""
+    return api_df
 
 @pytest.fixture(scope="module")
-def customers_df(spark):
-    """Load customers data as PySpark DataFrame with a predefined schema."""
-    return read_csv(spark, "data/customers.csv", schema=CUSTOMERS_SCHEMA)
+def sales_data_df():
+    """Fixture to provide Sales Data DataFrame."""
+    return sales_df
+
+@pytest.fixture(scope="module")
+def customers_data_df():
+    """Fixture to provide Customers Data DataFrame."""
+    return customers_df
 
