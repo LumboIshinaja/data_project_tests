@@ -39,4 +39,4 @@ api_transactions_view_df = spark.sql("SELECT * FROM raw_api_transactions")
 
 print("Temporary view created successfully.")
 
-spark.sql("SELECT * FROM raw_api_transactions LIMIT 100").show()
+# spark.sql("SELECT * FROM raw_api_transactions LIMIT 100").show()
