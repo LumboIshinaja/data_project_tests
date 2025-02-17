@@ -100,7 +100,7 @@ data_tests/
 │   └── test_performance.py     # Performance tests
 │
 │── utils/
-│   ├── data_loader.py          # CSV loading with PySpark DataFrames
+│   ├── data_loader.py          # Source files loading creating View and DataFrames 
 │   ├── schema_definitions.py   # PySpark schema definitions
 │   └── data_validators.py      # Data validation helpers
 │
