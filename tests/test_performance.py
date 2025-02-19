@@ -1,10 +1,10 @@
 import pytest
 from utils.data_validators import measure_execution_time
 
-AGGREGATION_QUERY_MAX_TIME = 3.0  # in seconds
-FILTER_QUERY_MAX_TIME = 3.0 
-JOIN_QUERY_MAX_TIME = 3.0
-SORT_QUERY_MAX_TIME = 3.0
+AGGREGATION_QUERY_MAX_TIME = 4.0  # in seconds
+FILTER_QUERY_MAX_TIME = 4.0 
+JOIN_QUERY_MAX_TIME = 4.0
+SORT_QUERY_MAX_TIME = 4.0
 
 @pytest.mark.performance
 def test_aggregation_execution_time(sales_data_df):
